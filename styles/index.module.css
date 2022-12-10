@@ -1,0 +1,66 @@
+.container {
+  background-color: #A68D6F;
+  height: auto;
+  width: 100%;
+  min-height: 100vh;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+
+.containerNavBar{
+  background-color: #CFC2A2;
+  width:100%;
+  border-bottom:solid 1px black;
+}
+
+.containerNavBar a{
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerNavBar div{
+  width: 90vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.bodyNavBavPersonal{
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.bodyNavBavPersonal h3 a{
+  text-decoration: none;
+  color: black;
+}
+
+.containerNav{
+  position: fixed;
+  z-index: 20;
+  left:0;
+  top:0;
+  height: 12vh;
+  display: flex;
+  width:100%;
+}
+
+@media (max-width: 768px){
+  .containerNavBar a{
+    width: auto;
+  }
+  .containerNavBar div{
+    font-size: 20px;
+    width: auto;
+    display: block;
+  }
+  .containerNavBar div ul li a {
+    font-size: 25px;
+  }
+}
