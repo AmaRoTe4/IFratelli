@@ -1,14 +1,7 @@
 //module.exports = {}
 
 module.exports = { // eslint-disable-line import/no-anonymous-default-export
-    plugins: [
-        'postcss-import',
-		'postcss-flexbugs-fixes',
-		'postcss-nested',
-		'postcss-custom-properties',
-		'tailwindcss',
-		'autoprefixer',
-    ],
+    plugins: [],
     images: {
         unoptimized: true,
         disableStaticImages:true

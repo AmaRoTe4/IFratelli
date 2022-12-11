@@ -17,8 +17,9 @@ export default function Local({width, height}:Props){
                 <Image 
                     alt="local IFratilli"
                     src={photoLocal}
-                    width={width}
-                    className={styles.photo}
+                    width={width >= 700 ? width * 0.65 : width}
+                    height={width >= 700 ? height * 0.65 : height * 0.45}
+                    //className={styles.photo}
                 />
             </section>
 
