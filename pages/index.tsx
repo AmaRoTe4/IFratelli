@@ -14,7 +14,7 @@ export default function Index() {
       <Head />
       <Navbar />
 
-      <div style={{height:'13.5vh'}} />
+      <div style={{height:'15.5vh'}} />
 
       <Home />
       <Servicios />

@@ -9,9 +9,10 @@
 }
 
 .containerNavBar{
-  background-color: #CFC2A2;
+  background-color: rgb(207, 194, 162);
   width:100%;
-  border-bottom:solid 1px black;
+  height:100%;
+  transition: all .9s ease;
 }
 
 .containerNavBar a{
@@ -23,9 +24,18 @@
 
 .containerNavBar div{
   width: 90vw;
-  display: flex;
   justify-content: end;
   align-items: center;
+}
+
+.containerNavBar div ul li:hover{
+  border:solid 1px black;
+  border-radius: 10px;
+  background-color: rgb(189, 177, 146)
+}
+
+.containerNavBar div ul{
+  transition: all .9s ease;
 }
 
 .bodyNavBavPersonal{
@@ -38,29 +48,46 @@
 
 .bodyNavBavPersonal h3 a{
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 30px;
 }
 
 .containerNav{
+  margin:0px;
+  padding:0px;
   position: fixed;
   z-index: 20;
   left:0;
   top:0;
-  height: 12vh;
+  height: 14vh;
   display: flex;
   width:100%;
+  background-color: rgb(207, 194, 162);
+  transition: all .9s ease;
 }
 
 @media (max-width: 768px){
-  .containerNavBar a{
-    width: auto;
-  }
   .containerNavBar div{
+    background-color: rgba(207, 194, 162 , .5);
+    border-bottom:solid 1px black;
     font-size: 20px;
     width: auto;
     display: block;
   }
+
+  .containerNavBar a{
+    height:100%;
+    width: auto;
+  }
+  .containerNavBar{
+    height:100%;
+  }
   .containerNavBar div ul li a {
     font-size: 25px;
   }
+}
+
+.active{
+  background-color: rgba(207, 194, 162, 0.5) !important;
+  height: 12vh;
 }
