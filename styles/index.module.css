@@ -82,6 +82,9 @@
   .containerNavBar{
     height:100%;
   }
+  .containerNavBar div ul li{
+    background-color:rgb(207, 194, 162);
+  }
   .containerNavBar div ul li a {
     font-size: 25px;
   }

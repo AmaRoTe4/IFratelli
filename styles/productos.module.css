@@ -3,4 +3,69 @@
     width: 100vw;
     margin: 0px;
     padding: 0px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+.boxProductos{
+    margin-top: 5vh;
+    height: auto;
+    width: 100vw;
+    border:solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxProductos ul{
+    list-style:none;
+    width:35vw;
+    height:70vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.boxProductos i{
+    font-size:50px;
+    color:white;
+    cursor:pointer;
+}
+
+.boxProductos i:hover{
+    opacity: .5;
+}
+
+.boxProductos{
+    background-color: #E9B346;
+}
+
+.boxImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:85%;
+    width: 100%;
+    background-color: #E9B346;
+}
+
+.boxNombre{
+    height:15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#D99100
+}
+
+.boxNombre h4{
+    color:white;
+}
+
+@media (max-width: 768px){
+    .boxProductos ul{
+        width:100vw;
+    } 
+    .boxProductos i{
+        font-size:30px;
+    }
 }

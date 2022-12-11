@@ -1,0 +1,26 @@
+[
+    {
+        "nombre":"nombre1",
+        "photo":"/images/cajaAlfajores.png"
+    },
+    {
+        "nombre":"nombre2",
+        "photo":"/images/cajaAlfajores.png"
+    },
+    {
+        "nombre":"nombre3",
+        "photo":"/images/cajaAlfajores.png"
+    },
+    {
+        "nombre":"nombre4",
+        "photo":"/images/cajaAlfajores.png"
+    },
+    {
+        "nombre":"nombre5",
+        "photo":"/images/cajaAlfajores.png"
+    },
+    {
+        "nombre":"nombre6",
+        "photo":"/images/cajaAlfajores.png"
+    }
+]

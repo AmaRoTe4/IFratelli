@@ -4,3 +4,42 @@
     margin: 0px;
     padding: 0px;
 }
+
+.container section {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container section ul{
+    list-style: none;
+    background-color: #886A46;
+    border:solid 2px white;
+    border-radius: 10px;
+    margin: 3vh;
+}
+.container section ul li{
+    margin: 2vh;
+}
+
+.containerNombre{
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerValue p{
+    text-align: justify;
+    color:white;
+}
+
+@media (max-width: 768px) {
+    .container section {
+        width:auto;
+    }
+}

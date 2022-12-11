@@ -8,7 +8,7 @@ export default function NavBarPersonal({nombre}:Props){
     return (
         <section className={styles.bodyNavBavPersonal}>
             <h3>
-                <a href={`#${nombre}`}>{nombre}</a>
+                <a href={`#${nombre}`} className="text-center">{nombre}</a>
             </h3>
         </section>
     )

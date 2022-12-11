@@ -4,21 +4,12 @@ import Image from "next/image"
 import photoLocal from "public/images/local.png"
 import { useEffect, useState } from "react";
 
-export default function Local(){
-    const [width , setWidth] = useState<number>(0);
-    const [height , setHeight] = useState<number>(0);
+interface Props{
+    height: number;
+    width: number;
+}
 
-    useEffect(() => {
-        const handleMedidad = () => {
-            setWidth(window.screen.width);
-            setHeight(window.screen.height);
-        };
-
-        handleMedidad();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [setWidth , setHeight]);
-
-
+export default function Local({width, height}:Props){
     return (
         <article className={styles.container} id="Local">
             <NavBarPersonal nombre="Nuestro Local"/>
