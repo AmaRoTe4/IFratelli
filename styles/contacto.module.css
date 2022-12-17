@@ -28,7 +28,7 @@
     height: 50%;
     display: flex;
     align-items: center;
-    margin: 0px 0px 0px 10px;
+    margin: 0px 0px -5px 15px;
 }
 
 .boxRedes{
@@ -83,7 +83,7 @@
     
     .boxContact div h4{
         height: 35%;
-        margin: 5px 0px 0px 20px;
+        margin: 5px 0px -5px 15px;
     }
 
     .boxRedes{
@@ -95,7 +95,7 @@
     }
     
     .boxRedes div a{
-        margin: 0px 8px;
+        margin: 0px 9px;
     }
 
     .boxCopy{

@@ -26,7 +26,7 @@ export default function Index() {
     return (
       <div className={styles.container} >
         <Head />
-        <Navbar />
+        <Navbar width={width} />
 
         <div style={{height:'15.5vh'}} />
 

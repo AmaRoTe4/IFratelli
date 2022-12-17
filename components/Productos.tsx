@@ -17,20 +17,32 @@ interface Props{
 export default function Productos({width , height}:Props){
     const [productos] = useState<Productos[]>(Data)
     const [vista , setVista] = useState<number[]>([0 , 1 , 2])
+    const [efecto , setEfecto] = useState<boolean>(false)
     
     const moverUnoDerecha = ():void => {
+        if(efecto) return 
         let aux = vista.map((n) => n !== 5 ? n + 1 : 0)
         setVista(aux)
+        transicion()
     }
 
     const moverUnoIzquierda = ():void => {
+        if(efecto) return 
         let aux = vista.map((n) => n !== 0 ? n - 1 : 5)
         setVista(aux)
+        transicion()
     }
 
     const moverTres = ():void => {
+        if(efecto) return 
         if(vista[0] === 0) setVista([3,4,5])
         else setVista([0,1,2])
+        transicion()
+    }
+
+    const transicion = ():void => {
+        setEfecto(true)
+        setTimeout(() => setEfecto(false) , 1000)
     }
 
     return (
@@ -45,7 +57,7 @@ export default function Productos({width , height}:Props){
                         </div>
                         {productos.map((n , i) => 
                             vista[0] === i || vista[1] === i || vista[2] === i
-                            ? <ul key={i}>
+                            ? <ul key={i} className={`${efecto ? styles.transition : ""}`}>
                                 <li className={styles.boxImage}>
                                     <Image 
                                         alt="Producto I Fratelli"
@@ -68,7 +80,7 @@ export default function Productos({width , height}:Props){
 
                 {width < 700 && 
                     <>
-                        <ul>
+                        <ul className={`${efecto ? styles.transition : ""}`}>
                             <li className={styles.boxImage}>
                                 <div onClick={(e) => {e.preventDefault();moverUnoIzquierda()} }>
                                     <i className="fa-solid fa-chevron-left"></i>

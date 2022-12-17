@@ -13,9 +13,9 @@ export default function Home({height , width}: Props){
         <article className={styles.container} id="Home">
             <section>
                 <div className={styles.boxMensaje}>
-                    <h1>Somos I Fratelli</h1>
+                    <h1>Somos IFratelli</h1>
                     <h3>Delicias Artesanales</h3>
-                    <h4>Productos de los mejores alfajores</h4>
+                    <h4>Productores de los mejores alfajores</h4>
                 </div>
                 <div className={styles.boxImage}>
                     <Image 

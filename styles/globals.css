@@ -1,19 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Lobster&family=Racing+Sans+One&family=Roboto+Mono:wght@500&display=swap');
+
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 html::-webkit-scrollbar {
   display: none;
 }
 
+h3{
+  font-family: 'Racing Sans One', cursive;
+}
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p, h4, h6, a{
+  /*font-family: 'Roboto Mono', monospace;*/
+  font-family: 'Alegreya', serif;
 }
 
 * {

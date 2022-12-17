@@ -11,18 +11,52 @@
     margin-top: 5vh;
     height: auto;
     width: 100vw;
-    border:solid 1px black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .boxProductos ul{
+    transition:all 1s ease;
     list-style:none;
     width:35vw;
     height:70vh;
     margin: 0px;
     padding: 0px;
+    border-top:solid 1px black;
+    border-bottom:solid 1px black;
+}
+
+.boxProductos div{
+    height:70vh;
+    width:5vw;
+    border-right:solid 1px black;
+    border-left:solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#A68D6F;
+}
+
+.transition li img{
+    animation-name:transition;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
+
+.transition li h4{
+    animation-name:transition;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
+
+@keyframes transition {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .boxProductos i{
@@ -67,5 +101,12 @@
     } 
     .boxProductos i{
         font-size:30px;
+    }
+    .boxProductos div{
+        height:auto;
+        width:auto;
+        border-right:none;
+        border-left:none;
+        background-color:#E9B346;
     }
 }

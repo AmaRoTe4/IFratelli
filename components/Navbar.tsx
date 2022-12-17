@@ -3,8 +3,14 @@ import Logo from "public/images/logo.png"
 import Image from "next/image"
 import { useEffect, useState } from "react";
 
-export default function Navbar(){
+interface Props{
+    width:number
+}
+
+export default function Navbar({width}:Props){
     const [scrollY, setScrollY] = useState<number>(0);
+    const [vista , setVista] = useState<boolean>(true);
+    const [timer , setTimer] = useState<number>(0);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +27,13 @@ export default function Navbar(){
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scrollY]);
 
+    const SetVista = ():void => {
+        if(timer !== 0) return;
+        setVista(!vista);
+        if(width >= 768) return; 
+        setTimer(1);
+        setTimeout(() => setTimer(0) , 1000)
+    }
 
     return (
         <nav 
@@ -37,25 +50,54 @@ export default function Navbar(){
                         width={80}
                     />
                 </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button className={`navbar-toggler ${!vista ? "collapsed" : ""}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded={vista} aria-label="Toggle navigation" onClick={e => {e.preventDefault() ; SetVista()}}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div id="navbarNav" className={`collapse navbar-collapse`}>  
+                <div id="navbarNav" className={
+                        `navbar-collapse 
+                        ${!vista ? 'show' : ""}
+                        ${timer > 0 ? 'collapsing' : "collapse"}
+                    `}>  
                     <ul className={`navbar-nav`}>
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#">Home</a>
+                        <li className="nav-item" onClick={() =>  SetVista()}>
+                            <a 
+                                className="nav-link active" 
+                                href="#Home"
+                            >
+                                Home
+                            </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#Servicios">Servicios</a>
+                        <li className="nav-item" onClick={() =>  SetVista()}>
+                            <a 
+                                className="nav-link active" 
+                                href="#Servicios"
+                            >
+                                Servicios
+                            </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#Productos">Productos</a>
+                        <li className="nav-item" onClick={() =>  SetVista()}>
+                            <a 
+                                className="nav-link active" 
+                                href="#Productos"
+                            >
+                                Productos
+                            </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#Local">Local</a>
+                        <li className="nav-item" onClick={() =>  SetVista()}>
+                            <a 
+                                className="nav-link active" 
+                                href="#Local"
+                            >
+                                Local
+                            </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#Contacto">Contacto</a>
+                        <li className="nav-item" onClick={() =>  SetVista()}>
+                            <a 
+                                className="nav-link active" 
+                                href="#Contacto"
+                            >
+                                Contacto
+                            </a>
                         </li>
                     </ul>
                 </div>

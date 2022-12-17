@@ -34,6 +34,10 @@
   background-color: rgb(189, 177, 146)
 }
 
+.containerNavBar div ul li a{
+  font-size: 25px;
+}
+
 .containerNavBar div ul{
   transition: all .9s ease;
 }
@@ -49,7 +53,7 @@
 .bodyNavBavPersonal h3 a{
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .containerNav{
@@ -67,12 +71,20 @@
 }
 
 @media (max-width: 768px){
+  .bodyNavBavPersonal h3 a {
+    font-size: 35px;
+  }
   .containerNavBar div{
     background-color: rgba(207, 194, 162 , .5);
     border-bottom:solid 1px black;
     font-size: 20px;
     width: auto;
     display: block;
+    transition: all 1s ease;
+  }
+
+  .containerNavBar div:focus:not(:focus-visible){
+    outline: none;
   }
 
   .containerNavBar a{
